@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,28 +6,36 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1>Password Checker</h1>
+      <h2>Podaj imie użytkownika</h2>
+      <div id="appka">
+          <input type="text" placeholder='Twoje imie to'/>
+
+        <h2>Podaj Hasło</h2>
+        <input type="text" placeholder='Pisz tu '/>
+        <div id="user-data">
+            <h2>Twoje rekordy</h2>
+            <table>
+              <tr>
+                <th>Imie</th>
+                <th>Data</th>
+                <th>Hasło testowae</th>
+                <th>Ilośc Punktów </th>
+              </tr>
+              <tr>
+                <td>Przyklad imie</td>
+                <td>Przyklad data</td>
+                <td>Przyklad haslo</td>
+                <td>Przyklad punkty </td>
+              </tr>
+           </table>
+        </div>
+        
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        
+
     </>
   )
 }
 
-export default App
+export default App  
