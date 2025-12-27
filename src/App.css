@@ -1,8 +1,8 @@
 /* Modern and user-friendly CSS for Password Checker */
 
 :root {
-  --primary-color: #4f46e5;
-  --secondary-color: #7c3aed;
+  --primary-color: #2675dc;
+  --secondary-color: #1c53b9;
   --background-color: #f8fafc;
   --card-background: #ffffff;
   --text-color: #1e293b;
@@ -26,7 +26,7 @@ body {
 
 #root {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
@@ -82,20 +82,49 @@ input {
 
 input:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 input::placeholder {
   color: var(--text-muted);
 }
 
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+  min-width: 120px;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
 #user-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-top: 2rem;
 }
 
 table {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
   background-color: var(--card-background);
   border-radius: var(--border-radius);
