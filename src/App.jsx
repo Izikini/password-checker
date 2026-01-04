@@ -10,7 +10,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3001/check-password', {
+      const response = await fetch('http://localhost:3003/check-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <h1>Password Checker</h1>
+      <h1>Sprawdź Swoje Hasło</h1>
 
       <div id="appka">
         <form onSubmit={handleSubmit}>

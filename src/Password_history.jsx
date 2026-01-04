@@ -8,7 +8,7 @@ function Password_history() {
   const fetchHistory = async () => {
     if (!username) return;
     try {
-      const response = await fetch(`http://localhost:3001/history/${username}`);
+      const response = await fetch(`http://localhost:3003/history/${username}`);
       const data = await response.json();
       if (response.ok) {
         setHistory(data);
