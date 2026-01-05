@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 
+// Component for displaying password check history
 function Password_history() {
+  // State for username input and history data
   const [username, setUsername] = useState('');
   const [history, setHistory] = useState([]);
 
+  // Function to fetch history from server
   const fetchHistory = async () => {
     if (!username) return;
     try {
@@ -15,7 +18,7 @@ function Password_history() {
       } else {
         alert(data.error);
       }
-    } catch (error) {
+    } catch {
       alert('Error fetching history');
     }
   };

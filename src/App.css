@@ -1,27 +1,32 @@
-/* Modern and user-friendly CSS for Password Checker */
+/* Professional Security-Themed CSS for Password Checker */
 
 :root {
-  --primary-color: #2675dc;
-  --secondary-color: #1c53b9;
-  --background-color: #f8fafc;
-  --card-background: #ffffff;
-  --text-color: #1e293b;
-  --text-muted: #64748b;
-  --border-color: #e2e8f0;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --border-radius: 12px;
-  --transition: all 0.3s ease;
+  --primary-color: #1e40af;
+  --secondary-color: #1e3a8a;
+  --accent-color: #dc2626;
+  --background-color: #0f172a;
+  --card-background: #1e293b;
+  --text-color: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
 }
 
 body {
-  background-color: var(--background-color);
+  background: var(--background-color);
   color: var(--text-color);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(30, 64, 175, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(220, 38, 38, 0.1) 0%, transparent 50%);
 }
 
 #root {
@@ -33,56 +38,78 @@ body {
 }
 
 #appka {
-  background-color: var(--card-background);
+  background: var(--card-background);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  padding: 2rem;
+  padding: 3rem;
   width: 100%;
   max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   transition: var(--transition);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+#appka::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient);
 }
 
 #appka:hover {
   box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0;
   text-align: center;
   margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: var(--text-color);
   margin: 0;
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 input {
   width: 100%;
   max-width: 300px;
-  padding: 0.75rem 1rem;
+  padding: 0.875rem 1rem;
   border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
   font-size: 1rem;
   font-family: inherit;
-  background-color: var(--card-background);
+  background-color: rgba(15, 23, 42, 0.5);
+  color: var(--text-color);
   transition: var(--transition);
   outline: none;
+  backdrop-filter: blur(10px);
 }
 
 input:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.2);
+  background-color: rgba(30, 64, 175, 0.1);
 }
 
 input::placeholder {
@@ -90,28 +117,108 @@ input::placeholder {
 }
 
 button {
-  background-color: var(--primary-color);
+  background: var(--gradient);
   color: white;
   border: none;
   border-radius: var(--border-radius);
-  padding: 0.75rem 1.5rem;
+  padding: 0.875rem 2rem;
   font-size: 1rem;
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
   transition: var(--transition);
   outline: none;
-  min-width: 120px;
+  min-width: 140px;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+button:hover::before {
+  left: 100%;
 }
 
 button:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
 }
 
-button:active {
-  transform: translateY(0);
+.password-input-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: var(--transition);
+  min-width: auto;
+  width: auto;
+}
+
+.result-container {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: white;
+}
+
+.score-0, .score-1 {
+  background-color: #dc2626;
+}
+
+.score-2 {
+  background-color: #f59e0b;
+}
+
+.score-3 {
+  background-color: #3b82f6;
+}
+
+.score-4 {
+  background-color: #10b981;
+}
+
+.feedback {
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-style: italic;
 }
 
 #user-data {
@@ -130,16 +237,17 @@ table {
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
 }
 
 th, td {
-  padding: 0.75rem;
+  padding: 0.875rem;
   text-align: left;
   border-bottom: 1px solid var(--border-color);
 }
 
 th {
-  background-color: var(--primary-color);
+  background: var(--gradient);
   color: white;
   font-weight: 600;
 }
@@ -149,13 +257,13 @@ tr:last-child td {
 }
 
 tr:hover {
-  background-color: #f1f5f9;
+  background-color: rgba(15, 23, 42, 0.5);
 }
 
 /* Responsive design */
 @media (max-width: 600px) {
   #appka {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     max-width: 90%;
   }
 
@@ -167,7 +275,16 @@ tr:hover {
     max-width: 100%;
   }
 
+  .password-input-container {
+    max-width: 100%;
+  }
+
   table {
     font-size: 0.875rem;
+    width: 100%;
+  }
+
+  .result-container {
+    padding: 1rem;
   }
 }
