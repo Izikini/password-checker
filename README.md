@@ -15,6 +15,19 @@ Aplikacja webowa do sprawdzania siły haseł. Użytkownicy mogą wprowadzać has
 - Wyświetlanie wyników w czasie rzeczywistym.
 - Historia zapisanych haseł.
 
+## Użycie
+
+1. **Sprawdzanie siły hasła**:
+   - Wprowadź swoją nazwę użytkownika w polu "Podaj imie użytkownika".
+   - Wprowadź hasło w polu "Podaj Hasło".
+   - Kliknij przycisk "Sprawdź hasło", aby ocenić siłę hasła.
+   - Wynik zostanie wyświetlony jako ocena od 0 do 4 punktów wraz z sugestiami poprawy.
+
+2. **Wyświetlanie historii**:
+   - Przejdź do sekcji historii haseł.
+   - Wprowadź nazwę użytkownika.
+   - Kliknij "Pobierz historię", aby zobaczyć zapisane sprawdzenia haseł w tabeli zawierającej datę, hasło i wynik.
+
 ## Wskazówki dotyczące tworzenia silniejszych haseł
 
 Aby stworzyć silne hasło, postępuj zgodnie z następującymi wskazówkami:
