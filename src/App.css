@@ -162,8 +162,7 @@ button:hover {
 .toggle-password {
   position: absolute;
   right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 20%;
   background: none;
   border: none;
   color: var(--text-muted);
@@ -171,7 +170,6 @@ button:hover {
   font-size: 1.2rem;
   padding: 0.25rem;
   border-radius: 4px;
-  transition: var(--transition);
   min-width: auto;
   width: auto;
 }
