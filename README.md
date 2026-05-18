@@ -1,59 +1,67 @@
-# Sprawdź Swoje Hasło (Password Checker App)
+# 🔐 Password Strength Checker
 
-Autor: Bohdan Bura  
-Wersja: 1.0
+**Author:** Bohdan Bura  
+**Version:** 1.0
 
-## Opis
+---
 
-Aplikacja webowa do sprawdzania siły haseł. Użytkownicy mogą wprowadzać hasła i oceniać ich siłę na podstawie długości, różnorodności znaków, obecności cyfr oraz wykrywania powtarzających się znaków, prostych wzorców (np. "qwerty", daty w formacie DD.MM.YYYY) i nazw użytkowników. Hasła mogą być zapisywane w bazie danych z datą, nazwą użytkownika i wynikiem.
+## 📝 Description
 
-## Funkcje
+A web application for checking password strength. Users can enter passwords and get an evaluation based on length, character variety, presence of numbers, detection of repeating characters, common patterns (e.g. "qwerty", dates in DD.MM.YYYY format), and usernames.
 
-- Wprowadzanie hasła przez użytkownika.
-- Ocena siły hasła na podstawie długości, różnorodności znaków, cyfr, wykrywania powtórzeń i wzorców.
-- Zapisywanie haseł w bazie danych z datą, nazwą użytkownika i wynikiem.
-- Wyświetlanie wyników w czasie rzeczywistym.
-- Historia zapisanych haseł.
+Passwords can be saved to a database along with the date, username, and strength score.
 
-## Użycie
+---
 
-1. **Sprawdzanie siły hasła**:
-   - Wprowadź swoją nazwę użytkownika w polu "Podaj imie użytkownika".
-   - Wprowadź hasło w polu "Podaj Hasło".
-   - Kliknij przycisk "Sprawdź hasło", aby ocenić siłę hasła.
-   - Wynik zostanie wyświetlony jako ocena od 0 do 4 punktów wraz z sugestiami poprawy.
+## ✨ Features
 
-2. **Wyświetlanie historii**:
-   - Przejdź do sekcji historii haseł.
-   - Wprowadź nazwę użytkownika.
-   - Kliknij "Pobierz historię", aby zobaczyć zapisane sprawdzenia haseł w tabeli zawierającej datę, hasło i wynik.
+- Real-time password strength evaluation
+- Detection of weak patterns, repetitions, and personal information
+- Saving password checks to the database
+- View history of previously checked passwords
+- Suggestions for improving password strength
 
-## Wskazówki dotyczące tworzenia silniejszych haseł
+---
 
-Aby stworzyć silne hasło, postępuj zgodnie z następującymi wskazówkami:
+## 🚀 How to Use
 
-1. **Długość**: Hasło powinno mieć co najmniej 12 znaków. Im dłuższe, tym lepiej.
-2. **Różnorodność znaków**: Używaj kombinacji małych i wielkich liter, cyfr oraz znaków specjalnych (np. !@#$%).
-3. **Unikaj powtórzeń**: Nie używaj powtarzających się znaków, takich jak "aaa" lub "111".
-4. **Unikaj powszechnych wzorców**: Nie używaj sekwencji jak "qwerty", "123456" czy "password".
-5. **Unikaj dat**: Nie używaj dat w formacie DD.MM.YYYY w haśle.
-6. **Unikaj osobistych informacji**: Nie włączaj swojego imienia, nazwiska lub innych osobistych danych do hasła.
-7. **Używaj menedżera haseł**: Rozważ użycie dedykowanego narzędzia do zarządzania hasłami, aby generować i przechowywać unikalne hasła dla różnych kont.
-8. **Regularnie zmieniaj hasła**: Zmieniaj hasła co kilka miesięcy, zwłaszcza dla ważnych kont.
+### 1. Check Password Strength
+- Enter your username in the "Username" field
+- Enter your password in the "Password" field
+- Click **"Check Password"**
+- You will receive a score from 0 to 4 points along with improvement suggestions
 
-## Instalacja i uruchomienie
+### 2. View History
+- Go to the history section
+- Enter your username
+- Click **"Get History"** to see all previously checked passwords with dates and scores
 
-1. Sklonuj repozytorium: `git clone https://github.com/Izikini/password-checker.git`
-2. Zainstaluj zależności: `npm install`
-3. Uruchom serwer: `npm run server`
-4. Uruchom aplikację frontend: `npm run dev`
+---
 
-Aplikacja będzie dostępna pod adresem `http://localhost:5173`, a serwer pod `http://localhost:3001`.
+## 💡 Tips for Creating Strong Passwords
 
-## Technologie
+1. **Length** — Use at least 12–16 characters. Longer is better.
+2. **Variety** — Include uppercase and lowercase letters, numbers, and special characters.
+3. **No repetitions** — Avoid sequences like "aaa" or "1111".
+4. **Avoid common patterns** — Do not use "qwerty", "123456", "password", etc.
+5. **Avoid dates** — Do not include dates in DD.MM.YYYY format.
+6. **Avoid personal info** — Never use your name, surname, or birthdate.
+7. **Use a password manager** — Consider tools like Bitwarden or 1Password.
+8. **Change passwords regularly** — Especially for important accounts.
 
-- Frontend: React
-- Backend: Node.js + Express
-- Baza danych: SQLite
-    
+---
 
+## 🛠 Installation and Running
+
+```bash
+git clone https://github.com/Izikini/password-checker.git
+cd password-checker
+npm install
+npm run server
+npm run dev
+```
+## 🧰 Technologies
+
+Frontend: React
+Backend: Node.js + Express
+Database: SQLite
